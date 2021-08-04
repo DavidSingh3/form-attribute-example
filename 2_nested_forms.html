@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>2. nested forms</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./process-form.js" defer></script>
+</head>
+<body>
+<form>
+    <table>
+        <thead>
+        <tr>
+            <th>value</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <input type="text" name="value_0" value="Test" required>
+            </td>
+            <td>
+                <form>
+                    <button name="action_delete" value="0">delete</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="value_1" value="Foo" required>
+            </td>
+            <td>
+                <form>
+                    <button name="action_delete" value="1">delete</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="value_2" value="Bar" required>
+            </td>
+            <td>
+                <form>
+                    <button name="action_delete" value="2">delete</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button name="action_update">update</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <form>
+            <tr class="new-value-row">
+                <td>
+                    <input type="text" name="new_value" required>
+                </td>
+                <td>
+                    <button name="action_add">add</button>
+                </td>
+            </tr>
+        </tfoot>
+</form>
+</table>
+</form>
+<div id="result"></div>
+</body>
+</html>

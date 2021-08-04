@@ -1,0 +1,18 @@
+body {
+    display: flex;
+}
+#result {
+    white-space: pre;
+    flex: 1;
+    margin-left: 44px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    padding: 12px 8px;
+}
+td[colspan="2"] button {
+    width: 100%;
+}

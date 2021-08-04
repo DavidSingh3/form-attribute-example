@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>2. form attribute workaround</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./process-form.js" defer></script>
+</head>
+<body>
+<div>
+    <form id="update_form"></form>
+    <form id="delete_form"></form>
+    <form id="add_form"></form>
+    <table>
+        <thead>
+        <tr>
+            <th>value</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <input type="text" name="value_0" value="Test" form="update_form" required>
+            </td>
+            <td>
+                <form>
+                    <button name="action_delete" value="0" form="delete_form">delete</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="value_1" value="Foo" form="update_form" required>
+            </td>
+            <td>
+                <form>
+                    <button name="action_delete" value="1" form="delete_form">delete</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="value_2" value="Bar" form="update_form" required>
+            </td>
+            <td>
+                <form>
+                    <button name="action_delete" value="2" form="delete_form">delete</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button name="action_update" form="update_form">update</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr class="new-value-row">
+            <td>
+                <input type="text" name="new_value" form="add_form" required>
+            </td>
+            <td>
+                <button name="action_add" form="add_form">add</button>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<div id="result"></div>
+</body>
+</html>
